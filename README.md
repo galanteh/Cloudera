@@ -2,7 +2,7 @@
 Cloudera Scripts &amp; Utils
 
 # Cloudera Data Flow
-We one script setup_cdf.sh with a configuration file called setup_cdf.cfg.
+We have one script in the install folder called setup_cdf.sh with a configuration file called setup_cdf.cfg.
 
 ## Configuration file
 We need to setup a configuration file, the following is a sample we we need to define variables that will define the installation of the CDF cluster with all the necessary parcels. 
