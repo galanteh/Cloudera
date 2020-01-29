@@ -196,10 +196,9 @@ npm install forever -g
 
 einfo "-- Install Python3.6"
 sudo yum install -y epel-release
-sudo yum install -y python36
-sudo yum install -y python36-devel
-sudo yum install -y python36-pip
-sudo yum install -y python36-setuptools
+sudo yum install -y https://centos7.iuscommunity.org/ius-release.rpm
+sudo yum install -y python36u python36u-libs python36u-devel python36u-pip
+sudo yum install -y python36u-setuptools
 sudo easy_install-3.6 pip
 sudo python3.6 -m pip install --upgrade pip setuptools wheel
 sudo python3.6 -m pip install cm_client
