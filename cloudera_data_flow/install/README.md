@@ -17,3 +17,19 @@ Sample:
     ```
      sudo setup_cdf.sh
     ```
+
+# Troubleshooting
+
+## SMM 
+
+### Kafka Cluster Name
+The Kafka cluster name is case sensitive. If you get this error listed on /var/log/streams-messaging-manager/streams-messaging-manager-ui.err, then you will need to check the property of SMM called cm.metrics.service.name. 
+Please, refer to the documentation of SMM on how to extract the real Kafka Service name: [Obtain the Kafka service name
+](https://docs.cloudera.com/csp/2.0.1/deployment/topics/csp-obtain-kafka-service-name.html) 
+
+### Error in the log file
+![](images/Error_cluster_name.png)
+
+### Error in the Service page on Cloudera Manager 
+![](images/SMM_Error_cluster_name.png)
+
