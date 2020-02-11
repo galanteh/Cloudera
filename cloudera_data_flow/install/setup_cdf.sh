@@ -60,6 +60,7 @@ sudo sed -i "s/HOSTNAME=.*/HOSTNAME=`hostname`/" /etc/sysconfig/network
 sudo iptables-save > ~/firewall.rules
 sudo systemctl disable firewalld
 sudo systemctl stop firewalld
+sudo sysctl -w vm.swappiness=1
 sudo setenforce 0
 sudo sed -i 's/SELINUX=.*/SELINUX=disabled/' /etc/selinux/config
 
