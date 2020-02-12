@@ -17,6 +17,24 @@ Sample:
     ```
      sudo setup_cdf.sh
     ```
+# Installing SRM
+## Configuration specs
+- clusters: We should use some alias of each cluster like primary and secondary. 
+
+```
+primary, secondary
+```
+
+- streams.replication.manager.config: Here we define where is the list of brokers of each kafka 
+
+```
+primary.bootstrap.servers=ccycloud-8.redlink-demo.root.hwx.site:9092,ccycloud-6.redlink-demo.root.hwx.site:9092,ccycloud-7.redlink-demo.root.hwx.site:9092
+secondary.bootstrap.servers=ccycloud-5.redlink-demo.root.hwx.site:9092,ccycloud-3.redlink-demo.root.hwx.site:9092,ccycloud-4.redlink-demo.root.hwx.site:9092
+primary->backup=true
+```
+
+- streams.replication.manager.driver.target.cluster: where do we need to write the collected information. In this example, backup.
+
 
 # Troubleshooting
 
