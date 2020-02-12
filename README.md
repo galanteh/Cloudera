@@ -27,5 +27,16 @@ FLINK_PARCEL=<PAYWALL_URL>/FLINK-1.9.0-csa0.1.1-cdh6.3.0-1512347-el7.parcel
 FLINK_PARCEL_SHA=<PAYWALL_URL>/FLINK-1.9.0-csa0.1.1-cdh6.3.0-1512347-el7.parcel.sha
 ```
 
+# Troubleshooting
 
+## Swappiness alerts
+You need to set the vm.swappiness in all nodes to 1. However, if the alarm persists, you can additionally change other parameters for the vm based on the reference article. Usually works fine.
+
+```bash
+sudo sysctl -w vm.min_free_kbytes=5242880
+sudo sysctl -w vm.vfs_cache_pressure=50
+sudo sysctl vm.swappiness=1
+```
+
+* http://datavelo.com/en/2018/04/10/kernel-swapping-vm-swappiness-1/
 
