@@ -84,7 +84,6 @@ sudo yum install -y cloudera-manager-daemons cloudera-manager-agent cloudera-man
 sudo yum install -y MariaDB-server MariaDB-client
 sudo cat mariadb.config > /etc/my.cnf
 
-
 einfo "--Enable and start MariaDB"
 sudo systemctl enable mariadb
 sudo systemctl start mariadb
