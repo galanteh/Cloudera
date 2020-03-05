@@ -156,6 +156,9 @@ sudo wget $NIFI_CSD_JAR -P /opt/cloudera/csd/
 sudo wget $NIFI_CA_CSD_JAR -P /opt/cloudera/csd/
 sudo wget $NIFI_REGISTRY_CSD_JAR -P /opt/cloudera/csd/
 
+einfo "-- Install SCHEMA REGISTRY CSDs"
+sudo wget $SCHEMAREG_CSD_JAR -P /opt/cloudera/csd/
+
 einfo "-- Install SMM CSDs"
 sudo wget $SMM_CSD_JAR -P /opt/cloudera/csd/
 
@@ -172,6 +175,10 @@ einfo " ======  Install Parcels ====== "
 einfo "-- Install CFM Parcels"
 sudo wget $CFM_PARCEL -P  /opt/cloudera/parcel-repo
 sudo wget $CFM_PARCEL_SHA -P  /opt/cloudera/parcel-repo
+
+einfo "-- Install SCHEMA REGISTRY Parcels"
+sudo wget $SCHEMAREG_PARCEL -P  /opt/cloudera/parcel-repo
+sudo wget $SCHEMAREG_PARCEL_SHA -P  /opt/cloudera/parcel-repo
 
 einfo "-- Install SMM Parcels"
 sudo wget $SMM_PARCEL -P /opt/cloudera/parcel-repo
@@ -193,7 +200,6 @@ sudo yum install -y gcc-c++ make
 sudo curl -sL https://rpm.nodesource.com/setup_10.x | sudo -E bash -
 sudo yum install nodejs -y
 npm install forever -g
-
 
 einfo "-- Install Python3.6"
 sudo yum install -y epel-release
